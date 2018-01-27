@@ -1,0 +1,151 @@
+@widthMin: 360px;
+@backgroundColor: rgba(255, 239, 213, 1);
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html,
+body {
+  height: 100%;
+}
+p{
+  font-size: 20px;
+}
+body {
+  background-image: url(img/bg.jpg);
+  background-repeat: repeat;
+  background-position: left top;
+  color: white;
+}
+
+.marginCentering {
+  margin: 0 auto;
+  min-width: @widthMin;
+}
+
+.container {
+  .marginCentering;
+  min-height: 100%;
+}
+
+h1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 40px;
+  word-spacing: 10px;
+}
+
+button{
+  outline: none;
+}
+
+#blockLocation {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+#locationName{
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  color: #4169E1;
+}
+#locationTitle{
+  font-style: italic;
+  color: #4169E1;
+}
+#btnF, #btnC {
+  margin: 20px;
+  padding: 10px;
+}
+#btnF:hover, #btnC:hover{
+  cursor: pointer;
+}
+
+#myLocation {
+  margin: 0;
+  width: 300px;
+  height: 300px;
+  background-image: url(img/button.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+#myLocation:hover {
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: 1s;
+  animation-name: earths;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.leftIcon, .rightIcon{
+  width: 48%;
+  text-align: center;
+  p.sm{
+    font-size: 16px;
+  }
+  img{
+    background-color: #00008B;
+  }
+}
+.leftIcon{
+  float: left;
+}
+.rightIcon{
+  float: right;
+}
+
+#forecastNavigation{
+  margin: 10px auto 0 auto;
+  width: 300px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+.bntNavigation{
+  padding: 0px 20px;
+  font-size: 50px;
+  line-height: 50px;
+}
+.bntNavigation:hover{
+  cursor: pointer;
+}
+
+@keyframes earths{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearFooter {
+  height: 35px;
+}
+
+footer {
+  .marginCentering;
+  margin-top: -35px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #333;
+  opacity: 0.8;
+  color: @backgroundColor;
+}
