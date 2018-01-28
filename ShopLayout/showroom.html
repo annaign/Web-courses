@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="headerShowroom" id="header">
+            <div class="navbar" id="navbar">
+                <a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="history.html">HISTORY</a></li>
+                        <li><a href="showroom.html">SHOWROOM</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="#"><img src="img/search.png" alt=""></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a href="">ALL</a></li>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">OFFICE</a></li>
+                    <li><a href="">FURNITURE</a></li>
+                    <li><a href="">MODERN</a></li>
+                    <li><a href="">CLASSIC</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="product-details">
+           <img src="img/prod1.png" alt="">
+           <div class="detailsText">
+              <h3>Fishnet Chair</h3>
+              <h4>Hot Deal</h4>
+              <h2>$ <span>36.7</span>/sq</h2>
+              <a href="#" class="btn bth-red">ORDER US</a>
+              <p>The majesty of Mountains - Ugmonk style.<br><br>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore<br><br>
+              et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+           </div>
+           <div class="igmSmall">
+               <a href="#"><img src="img/prod2.png" alt=""></a>
+               <a href="#"><img src="img/prod3.png" alt=""></a>
+               <img src="img/prod4.png" alt="">
+           </div>
+        </div>
+
+        <div class="featured-product trending-product">
+            <div class="tab-control">
+                <ul>
+                    <li><a href="#">RELATED PRODUCTS</a></li>
+                </ul>
+                <a href="#">EXPLORE ALL</a>
+            </div>
+            <div class="products">
+                <ul>
+                    <li><a href="#"><img src="img/product-11.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/product-21.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/product-31.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/product-41.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/product-5.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/product-6.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact">
+                <h3>CONTACT US</h3>
+                <p>132A Bridge Road Richmond VIC Austarlia.</p><br>
+                <p>Talk to us on 1300 132<br> info@interior.com</p>
+            </div>
+            <div class="info">
+                <h3>USEFUL INFORMATION</h3>
+                <div>
+                    <a href="#">SALES TERMS</a>
+                    <a href="#">CUSTOMER CARE</a>
+                    <a href="#">DELIVERY</a>
+                </div>
+                <div>
+                    <a href="#">ARCHITECT ACCOUNTS</a>
+                    <a href="#">CAREERS</a>
+                    <a href="#">EXCHANGES &amp; RETURNS</a>
+                </div>
+            </div>
+            <div class="mail">
+                <h3>LET'S STAY IN TOUCH!</h3>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <form action="#" id="form1">
+                    <input type="email" placeholder="your email adress">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <div class="social">
+                <div class="left">COPYRIGHT - INTERIOR 2016. ALL RIGHTS REDERVED.</div>
+                <div class="icon">
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-facebook fa-fw "></i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-twitter fa-fw "></i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-fw "><span>g</span>+</i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-pinterest-p fa-fw "></i></a>
+                </div>
+                <div class="right"><a href="#">TERMS &amp; CONDITIONS / PRIVACY &amp; COOKIES</a></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        window.onscroll = function() {stickyFunction()};
+        
+        var header = document.getElementById("header");
+        var navbar = document.getElementById("navbar");
+        var sticky = header.offsetHeight;
+
+        function stickyFunction() {
+           if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+           } else {
+            navbar.classList.remove("sticky");
+          }
+         } 
+    </script>
+    
+</body>
+
+</html>

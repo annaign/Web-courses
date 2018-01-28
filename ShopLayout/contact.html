@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="headerContact" id="header">
+            <div class="navbar" id="navbar">
+                <a class="logo" href="#"><img src="img/logo.png" alt="logo"></a>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="history.html">HISTORY</a></li>
+                        <li><a href="showroom.html">SHOWROOM</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="#"><img src="img/search.png" alt=""></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="text">
+                <h1>Contact Us</h1>
+            </div>
+        </div>
+
+        <div class="location">
+            <div class="locationBlocks">
+                <ul>
+                    <li>
+                        <img src="img/location.png" alt="location">
+                        <h2>California</h2>
+                        <h5>Phone:</h5>
+                        <p>1900 - 1234 -5678</p>
+                        <h5>Email:</h5>
+                        <p>info@interior.com</p>
+                        <h5>Address:</h5>
+                        <p class="gray">12 W 1st St, 90001 Los Angeles, California</p>
+                    </li>
+                    <li>
+                        <img src="img/location.png" alt="location">
+                        <h2>California</h2>
+                        <h5>Phone:</h5>
+                        <p>1900 - 1234 -5678</p>
+                        <h5>Email:</h5>
+                        <p>info@interior.com</p>
+                        <h5>Address:</h5>
+                        <p class="gray">12 W 1st St, 90001 Los Angeles, California</p>
+                    </li>
+                    <li>
+                        <img src="img/location.png" alt="location">
+                        <h2>California</h2>
+                        <h5>Phone:</h5>
+                        <p>1900 - 1234 -5678</p>
+                        <h5>Email:</h5>
+                        <p>info@interior.com</p>
+                        <h5>Address:</h5>
+                        <p class="gray">12 W 1st St, 90001 Los Angeles, California</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact">
+                <h3>CONTACT US</h3>
+                <p>132A Bridge Road Richmond VIC Austarlia.</p>
+                <p>Talk to us on 1300 132<br> info@interior.com</p>
+            </div>
+            <div class="info">
+                <h3>USEFUL INFORMATION</h3>
+                <div>
+                    <a href="#">SALES TERMS</a>
+                    <a href="#">CUSTOMER CARE</a>
+                    <a href="#">DELIVERY</a>
+                </div>
+                <div>
+                    <a href="#">ARCHITECT ACCOUNTS</a>
+                    <a href="#">CAREERS</a>
+                    <a href="#">EXCHANGES &amp; RETURNS</a>
+                </div>
+            </div>
+            <div class="mail">
+                <h3>LET'S STAY IN TOUCH!</h3>
+                <p>Suscribe to know about our latest news, products and special offers just for suscribers.</p>
+                <form action="#" id="form1">
+                    <input type="email" placeholder="your email adress">
+                    <input type="submit" value="">
+                </form>
+            </div>
+            <div class="social">
+                <div class="left">COPYRIGHT - INTERIOR 2016. ALL RIGHTS REDERVED.</div>
+                <div class="icon">
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-facebook fa-fw "></i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-twitter fa-fw "></i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-fw "><span>g</span>+</i></a>
+                    <a target="_blank" rel="noopener noreferrer" href="#">
+                            <i class="fa fa-pinterest-p fa-fw "></i></a>
+                </div>
+<!--                <img src="img/social-links.png" alt="">-->
+                <div class="right"><a href="#">TERMS &amp; CONDITIONS / PRIVACY &amp; COOKIES</a></div>
+            </div>
+        </div>
+
+    </div>
+    
+    <script>
+        window.onscroll = function() {stickyFunction()};
+        
+        var header = document.getElementById("header");
+        var navbar = document.getElementById("navbar");
+        var sticky = header.offsetHeight;
+
+        function stickyFunction() {
+           if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+           } else {
+            navbar.classList.remove("sticky");
+          }
+         } 
+    </script>
+    
+</body>
+
+</html>
