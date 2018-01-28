@@ -1,7 +1,7 @@
 # Web-courses
 
 
-## freecodecamp / [Front End Development Certification] (https://www.freecodecamp.org)
+## freecodecamp / [Front End Development Certification](https://www.freecodecamp.org)
 
 * [Build a Wikipedia Viewer]()
 * [Show the Local Weather](https://github.com/annaign/Web-courses/tree/master/LocalWeather "LocalWeather")
