@@ -3,7 +3,7 @@
 
 ## freecodecamp / [Front End Development Certification](https://www.freecodecamp.org)
 
-* [Build a Wikipedia Viewer]()
+* [Build a Wikipedia Viewer](https://github.com/annaign/Web-courses/tree/master/WikipediaViewer "WikipediaViewer")
 * [Show the Local Weather](https://github.com/annaign/Web-courses/tree/master/LocalWeather "LocalWeather")
 * [Build a Random Quote Machine](https://github.com/annaign/Web-courses/tree/master/RandomQuoteMachine "RandomQuoteMachine")
 * [Build a Tribute Page](https://github.com/annaign/Web-courses/tree/master/Tribute%20page "Tribute page")
