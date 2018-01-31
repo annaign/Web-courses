@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Wikipedia Viewer</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Wikipedia Viewer</h1>
+
+    <div class="wrapper">
+      <div id="bntRandom">
+        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" rel="noopener noreferrer">Random Wikipedia article</a>
+      </div>
+
+      <button class="btnOpenForm" onclick="openSearchBox()">Search Wikipedia article</button>
+
+      <div id="searchForm">
+        <span class="btnCloseForm" onclick="closeSearchBox()" title="close box">&#215;</span>
+
+        <form name="formWiki" id="wiki">
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <input type="search" placeholder="Search..." name="formWikiText" required>
+
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+
+    <div id="dataWiki">
+      <!--
+      <div class="blockData">
+        <a href="#">
+          <div class="imgWiki"></div>
+          <div class="textWiki"></div>
+
+          <div class="clearfix"></div>
+        </a>
+      </div>
+-->
+    </div>
+
+    <div class="clearFooter"></div>
+  </div>
+
+  <footer>Copyright &copy; 2018</footer>
+
+</body>
+
+</html>
