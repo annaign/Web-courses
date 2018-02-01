@@ -1,0 +1,165 @@
+.product{
+    padding: 20px 50px;
+    background-color: #F0FFF0;
+}
+
+/* Позиционирование блоков */
+.product .productImage {
+    margin: 5px;
+    float: right;
+}
+.product .productBlock {
+    max-width: 650px;
+    margin-right: 5px;
+    float: left;
+}
+.buySection {
+    margin: 5px;
+    margin-left: 130px;
+    padding-top: 5px;
+}
+.product section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Стили для изображения */
+.product .productImage a {
+    /* Чтобы убрать пустое пространство снизу, между картинкой и рамкой */
+    display: block;
+    width: 450px;
+    font-size: 0;
+    outline: none;
+}
+.product .productImage a img {
+    width: 450px;
+    outline: 0px solid green;
+    transition: all 0.5s ease-in-out;
+}
+.product .productImage a:hover img{
+    outline: 5px solid green;
+    filter:  contrast(130%);   
+}
+.product .productImage.noseason a img {
+    opacity: 0.5;
+}
+.product .productImage.noseason a:hover img{ 
+    opacity: 1.0;
+}
+
+/* Стили для текста */
+.product h3 {
+    padding-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: #eaeaea;
+}
+.product .productShort p {
+    color: #707070;
+    font-size: 16px;
+    line-height: 18px;
+    font-style: italic;
+}
+.product .productCooking li {
+    font-style: italic;
+    list-style-image: url(../img/list1.png);
+}
+.productSeason table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+.productSeason table td {
+    border: 1px solid black;
+    padding: 15px 20px;
+}
+.productSeason table .isolate {
+    background-color: #98FB98;
+    font-weight: bold;
+}
+.product .productFull p {
+    color: #484343;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+.product .productFull p::first-letter {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    color: red;
+}
+
+/*  Стили для формы для покупок */
+.hidden,
+.hidden2 {
+    position: absolute;
+    left: 20px;
+    opacity: 0;
+}
+.buy {
+    position: absolute;
+    color: #006400;
+    left: 20px;
+}
+.buySection .formProduct #buyProduct {
+    position: relative;
+    padding: 10px 30px 10px 60px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: rgb(135, 206, 250);
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.buySection .formProduct #buyProduct:hover {
+    background-color: #ADFF2F;
+    border-color: #006400;
+    cursor: pointer;
+}
+.buySection .formProduct #buyProduct:active {
+    background-color: red;
+    transition: background-color 0.1s ease-in-out;
+}
+.buySection .formProduct #buyProduct .buy{
+    transition: all 0.5s ease-in-out;    
+}
+.buySection .formProduct #buyProduct .hidden{
+    transform: scale(3);
+    color: #800000;
+    transition: all 0.5s ease-in-out;    
+}
+.buySection .formProduct #buyProduct:hover .buy{
+    color: white;
+    opacity: 0;
+    transform: scale(3);
+}
+.buySection .formProduct #buyProduct:hover .hidden{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Продукта нет в продаже */
+.noProduct #buyProduct{
+    cursor: not-allowed;
+}
+.noProduct .formProduct #buyProduct:hover{
+    cursor: not-allowed;
+    background-color: rgb(135, 206, 250);
+    border-color: buttonface;
+}
+.noProduct #buyProduct .buy {
+     opacity: 0;
+}
+.noProduct #buyProduct .hidden2{
+     opacity: 1;
+}
+.noProduct .formProduct #buyProduct:hover .hidden{
+    opacity: 0;
+}
+
+/* Убрать свечение вокруг кнопок в Chrome */
+.buySection .formProduct button {
+    outline: none;
+}

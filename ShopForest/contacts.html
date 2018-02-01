@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
+    <link rel="stylesheet" href="css/styleMain.css" type="text/css">
+    <link rel="stylesheet" href="css/styleContact.css" type="text/css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        
+        <header class="mainHeader">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Логотип"></a>
+            </div>
+            <div class="basket">
+                <a href="basket.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>            
+        </header>
+        
+        <section class="contacts">        
+            <div class="formContacts">
+                <h2>Напишите нам</h2>
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Сообщение</legend>
+                        <table>
+                            <tr>
+                                <td><input type="text" name="name" id="name" placeholder="Ваше имя" required></td>
+                                <td><input type="email" name="email" id="email" placeholder="Ваш e-mail" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><input type="text" name="topic" id="topic" placeholder="Тема сообщения" required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><textarea name="message" id="message" rows="8" placeholder="Текст сообщения" required></textarea></td>
+                            </tr>
+                        </table>
+
+                        <input type="submit" value="Отправить сообщение">
+                        <input type="reset" value="Очистить форму">
+                    </fieldset>
+                </form>
+            </div>
+            
+            <div class="adress">
+                <div class="contact">
+                    <h2>Наш адрес</h2>
+                    <p>Телефон: +X (XXX) XXX-XX-XX<br> Адрес: г. XXXXXXX,<br> ул. xxxxxxxx, д. xx</p>
+                    
+                    <span>E-mail: <a class="customA" href="mailto:#"> xxxxx@xxxxx.xx</a></span><br><br>
+                       
+                    <a class="btn btn-info" role="button" target="_blank" rel="noopener noreferrer" href="https://github.com"><i class="fa fa-github fa-fw fa-fw"></i></a>
+                    <a class="btn btn-info" role="button" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com"><i class="fa fa-facebook fa-fw"></i></a>
+                    <a class="btn btn-info" role="button" target="_blank" rel="noopener noreferrer" href="https://www.telegram.org/"><i class="fa fa-telegram fa-fw"></i></a>
+                    
+                </div>
+
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108926.46178384723!2d36.081808635998705!3d56.46353272238307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5c5bc9b32f0e9%3A0xeda87c49d0f69d44!2z0JTQvtGA0LjQvdC-LCDQotCy0LXRgNGB0LrQsNGPINC-0LHQuy4!5e1!3m2!1sru!2sru!4v1515675514241" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+        </section>
+        
+        <footer class="mainFooter">
+            Все права защищены &copy;&nbsp;2018
+        </footer>
+        
+    </div>
+    
+</body>
+</html>

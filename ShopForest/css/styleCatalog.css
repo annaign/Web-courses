@@ -1,0 +1,68 @@
+.catalog{
+    padding: 20px 50px;
+    background-color: #F0FFF0;
+}
+.catalog h1 {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Позиционирование блоков */
+.catalog .catalogImage {
+    margin: 5px;
+    border: 1px solid transparent;
+    float: left;
+    border: 1px solid green;
+}
+.catalog section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Стили для изображения */
+.catalog .catalogImage a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.catalog .catalogImage img {
+    width: 200px;
+    height: 150px;
+}
+.catalog .catalogImage.noseason{
+    position: relative;
+}
+.catalog .catalogImage.noseason::after {
+    position: absolute;
+    display: block;
+    width: 180px;
+    height: 30px;
+    top: 50px;
+    left: 10px;
+    content: "Нет в продаже";
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+    background-color: transparent;
+    outline: none;
+    opacity: 1.0;
+}
+.catalog .catalogImage:hover{ 
+    outline: 4px solid green;
+}
+.catalog .noseason img {
+    opacity: 0.5;
+}
+.catalog .noseason:hover img { 
+    opacity: 1.0;
+}
+.catalog .catalogImage.noseason:hover::after{
+    opacity: 0;
+}
+.catalog .catalogImage p {
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}

@@ -1,0 +1,136 @@
+.contacts{
+    padding: 30px 60px;
+    background-color: #F0FFF0;
+}
+
+.formContacts h2,
+.adress h2{
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.formContacts form{
+    background-color: #c6e6ae;
+    font-size: 18px;
+}
+.formContacts form fieldset{
+    border: 1px solid gray;
+    padding: 15px;
+}
+
+/* Размеры полей в форме */
+.formContacts form #name,
+.formContacts form #email {
+    width: 300px;
+    height: 25px;
+}
+.formContacts form #topic {
+    width: 625px;
+    height: 25px;
+}
+.formContacts form #message {
+     width: 625px;
+}
+
+/* Стиль полей с введенным текстом */
+.formContacts form #email,
+.formContacts form #name,
+.formContacts form #topic,
+.formContacts form #message {
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    background-color: #FFE4E1;
+    transform: rotate(2deg);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Стиль для полей, получающих фокус */
+.formContacts form #email:focus,
+.formContacts form #name:focus,
+.formContacts form #topic:focus,
+.formContacts form #message:focus {
+    background-color: #FFF5EE;
+    transform: rotate(0deg);
+}
+.formContacts form #email:valid,
+.formContacts form #name:valid,
+.formContacts form #topic:valid,
+.formContacts form #message:valid{
+    background-color: #F0FFF0;
+    transform: rotate(0deg);
+}
+
+/* Каждая первая буква во вводимом слове становится заглавной */
+.formContacts form #name {
+    text-transform: capitalize;    
+}
+.formContacts form #name:focus {
+    text-transform: capitalize;
+}
+
+/* Стили для кнопок формы */
+.formContacts form input[type="submit"]{
+    margin-right: 10px;
+}
+.formContacts form input[type="submit"],
+.formContacts form input[type="reset"] {
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #aee6ea;
+    transition: all 0.3s ease-in-out;
+}
+.formContacts form input[type="submit"]:hover {
+    background-color: #7fb579;
+    transform: scale(1.1);
+}
+.formContacts form input[type="reset"]:hover {
+    background-color: #c99775;
+    transform: scale(1.1);
+}
+
+/* Убрать свечение вокруг кнопок в Chrome */
+.formContacts form input[type="submit"],
+.formContacts form input[type="reset"] {
+    outline: none;
+}
+.adress{
+    padding: 30px 20px 0px 20px;
+}
+.adress p{
+    line-height: 30px;
+}
+.adress a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+}
+.adress a i{
+    font-size: 30px;
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+.adress a:hover{
+    color: green;
+    text-decoration: underline;
+}
+.adress a:hover i{
+    color: green;
+    transform: scale(1.2);
+}
+.adress .contact{
+    float: left;
+}
+.adress .map{
+    float: right;
+}
+.adress::after{
+    content: "";
+    display: table;
+    clear: both;
+}

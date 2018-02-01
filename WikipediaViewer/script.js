@@ -39,7 +39,7 @@ function getWikiData(wikiResponce) {
   var tempHtml1, tempHtml2, tempHtml3;
   var htmlWiki = [];
 
-  for (element in wikiData) {
+  for (var element in wikiData) {
     tempHtml1 = '<div class="blockData"><a href="https://en.wikipedia.org/?title=' + wikiData[element].title + '" target="_blank" rel="noopener noreferrer"><div class="imgWiki">';
 
     tempHtml2 = '';

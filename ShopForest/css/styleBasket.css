@@ -1,0 +1,49 @@
+.order{
+    padding: 20px 50px;
+    background-color: #F0FFF0;    
+}
+
+/* Позиционирование блоков */
+.allProducts {
+ float: left;   
+}
+
+
+
+.bntOrder {
+    width: 200px;
+	height: 267px;
+    float: right;
+	background-image: url(../img/bgOrder.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+button {
+  	display: block;
+    margin: 140px auto 0 auto;
+    padding: 10px;
+    width: 140px;
+    font-size: 25px;
+    border-radius: 5px;
+    background-color: rgb(135, 206, 250);
+    overflow: hidden;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+button:hover {
+    background-color: #ADFF2F;
+    border-color: #006400;
+    cursor: pointer;
+}
+button:active {
+    background-color: red;
+    transition: background-color 0.1s ease-in-out;
+}
+
+
+
+.clearfix{
+	clear: both;
+}
