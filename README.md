@@ -11,7 +11,7 @@
 
 ## geekbrains.ru / [Интерактивный видеокурс по HTML/CSS](https://geekbrains.ru)
 
-* [Build a web store]()
+* [Build a web store](https://github.com/annaign/Web-courses/tree/master/ShopForest "ShopForest")
 * [Layout: web store](https://github.com/annaign/Web-courses/tree/master/ShopLayout "ShopLayout")
 
 
