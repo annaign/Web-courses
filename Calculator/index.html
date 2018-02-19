@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Elementary Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h1>Elementary Calculator</h1>
+
+	<div class="container">
+		<div class="calc">
+			<div class="text" id="js-textField"></div>
+			<div class="memory" id="js-memoryField"></div>
+			<div class="buttons">
+				<button type="button" class="btnClear" onclick="btnClear()">Cl</button>
+				<button type="button" onclick="btnNumber()">7</button>
+				<button type="button" onclick="btnNumber()">8</button>
+				<button type="button" onclick="btnNumber()">9</button>
+				<button type="button" class="btnAction" onclick="btnAction()">/</button>
+				<button type="button" onclick="btnNumber()">4</button>
+				<button type="button" onclick="btnNumber()">5</button>
+				<button type="button" onclick="btnNumber()">6</button>
+				<button type="button" class="btnAction" onclick="btnAction()">&#8727;</button>
+				<button type="button" onclick="btnNumber()">1</button>
+				<button type="button" onclick="btnNumber()">2</button>
+				<button type="button" onclick="btnNumber()">3</button>
+				<button type="button" class="btnAction" onclick="btnAction()">&#8722;</button>
+				<button type="button" onclick="btnNumber()">0</button>
+				<button type="button" onclick="btnNumber()">.</button>
+				<button type="button" onclick="btnCalculate()">=</button>
+				<button type="button" class="btnAction" onclick="btnAction()">+</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
