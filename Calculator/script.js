@@ -115,8 +115,8 @@ function calc() {
 		return false;
 	}
 
-	if (result.toString().length > maxNumLength) {
-		let temp = result.toString();
+	if (Math.abs(result).toString().length > maxNumLength) {
+		let temp = Math.abs(result).toString();
 		let i = 0;
 		while (temp[i] !== "." && i < temp.length) {
 			i++;
@@ -156,5 +156,4 @@ function btnCalculate() {
 		btnAct = false;
 		result = null;
 	}
-
 }

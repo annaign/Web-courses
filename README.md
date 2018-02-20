@@ -1,7 +1,7 @@
 # Web-courses
 
 
-## freecodecamp / [Front End Development Certification](https://www.freecodecamp.org)
+## freeCodeCamp / [Front End Development Certification](https://www.freecodecamp.org)
 
 * [Build a JavaScript Calculator](https://github.com/annaign/Web-courses/tree/master/Calculator "Calculator")
 * [Build a Wikipedia Viewer](https://github.com/annaign/Web-courses/tree/master/WikipediaViewer "WikipediaViewer")
