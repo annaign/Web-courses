@@ -3,6 +3,7 @@
 
 ## freeCodeCamp / [Front End Development Certification](https://www.freecodecamp.org)
 
+* [Build a Pomodoro Clock](https://github.com/annaign/Web-courses/tree/master/PomodoroClock "PomodoroClock")
 * [Build a JavaScript Calculator](https://github.com/annaign/Web-courses/tree/master/Calculator "Calculator")
 * [Build a Wikipedia Viewer](https://github.com/annaign/Web-courses/tree/master/WikipediaViewer "WikipediaViewer")
 * [Show the Local Weather](https://github.com/annaign/Web-courses/tree/master/LocalWeather "LocalWeather")
