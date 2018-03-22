@@ -1,0 +1,12 @@
+.btnBlock {
+  width: 360px;
+  margin: 0 auto;
+}
+
+.sound.off {
+  display: none;
+}
+
+.sound.on {
+  display: inline-block;
+}

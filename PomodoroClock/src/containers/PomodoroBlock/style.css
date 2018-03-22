@@ -1,0 +1,20 @@
+.pomodoroBlock {
+  width: 270px;
+  height: 200px;
+  margin: 5px auto;
+}
+
+.pomodoro {
+  background-color:#FF4500;
+}
+.rest {
+  background-color: yellow;
+}
+
+.pomodoroManage {
+  width: 70px;
+  height: 200px;
+  float: left;
+  box-sizing: border-box;
+  /* border: 1px solid grey; */
+}

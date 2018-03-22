@@ -1,0 +1,22 @@
+.inputRangeWrap {
+  width: 100px;
+  height: 150px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+.inputRange {
+  width: 150px;
+  height: 30px;
+  box-sizing: border-box;
+  transform: translate(-50px, 70px) rotate(90deg);
+}
+.inputRangefalse {
+  display: block;
+}
+.inputRangetrue {
+  display: none;
+}
+.inputRangeWrap p {
+  padding-left: 15px;
+  font-size: 30px;
+}
