@@ -86,9 +86,14 @@ button {
   width: 48%;
   text-align: center;
 }
+.leftIcon p.sm0,
+.rightIcon p.sm0 {
+  font-size: 16px;
+}
 .leftIcon p.sm,
 .rightIcon p.sm {
-  font-size: 16px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .leftIcon img,
 .rightIcon img {
@@ -99,6 +104,9 @@ button {
 }
 .rightIcon {
   float: right;
+}
+#blockLocation a {
+  line-height: 40px;
 }
 #forecastNavigation {
   margin: 10px auto 0 auto;

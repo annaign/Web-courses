@@ -47,7 +47,8 @@ function successLocation(position) {
     accuracy = accuracy.toFixed(0);
   }
 
-  weatherUrl = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search.json?q=' + latitude + ',' + longitude + '&apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh';
+  weatherUrl = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search.json?q='
+                + latitude + ',' + longitude + '&apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh';
 
   document.body.style.background = "#ffffff url(img/compass.jpg) no-repeat center top";
   document.body.style.color = "black";
@@ -76,7 +77,8 @@ function successLocation(position) {
   var bntImperial = document.getElementById('btnF');
   bntImperial.onclick = function () {
     metric = false;
-    weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/' + dataLocation.Key + '?apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh' + '&metric=false';
+    weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+            + dataLocation.Key + '?apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh' + '&metric=false';
 
     ajaxRequest(weatherUrl, get5daysForecast);
   };
@@ -84,7 +86,8 @@ function successLocation(position) {
   var bntMetric = document.getElementById('btnC');
   bntMetric.onclick = function () {
     metric = true;
-    weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/' + dataLocation.Key + '?apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh' + '&metric=true';
+    weatherUrl = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+            + dataLocation.Key + '?apikey=5cletl4C6fQDKChSaKpROyC55HCzLvFh' + '&metric=true';
 
     ajaxRequest(weatherUrl, get5daysForecast);
   };
@@ -180,16 +183,17 @@ function changeBlockInfo(i) {
     '<p>date: ' + dateForecast.toDateString() + '</p><br>' +
 
     '<div class="leftIcon"><p>min: ' + dataForecast.DailyForecasts[i].Temperature.Minimum.Value +
-    ' ' + degree + '</p><br><p class="sm"><u>day</u></p><p class="sm">' +
+    ' ' + degree + '</p><br><p class="sm0"><u>Night</u></p><p class="sm">' +
+    dataForecast.DailyForecasts[i].Night.IconPhrase +
+    '</p><br><img src="https://developer.accuweather.com/sites/default/files/' +
+    strZeroNight + dataForecast.DailyForecasts[i].Night.Icon + '-s.png" alt=""></div>' +
+
+    '<div class="rightIcon"><p>max: ' + dataForecast.DailyForecasts[i].Temperature.Maximum.Value +
+    ' ' + degree + '</p><br><p class="sm0"><u>Day</u></p><p class="sm">' +
     dataForecast.DailyForecasts[i].Day.IconPhrase +
     '</p><br><img src="https://developer.accuweather.com/sites/default/files/' +
     strZeroDay + dataForecast.DailyForecasts[i].Day.Icon + '-s.png" alt=""></div>' +
 
-    '<div class="rightIcon"><p>max: ' + dataForecast.DailyForecasts[i].Temperature.Maximum.Value +
-    ' ' + degree + '</p><br><p class="sm"><u>night</u></p><p class="sm">' +
-    dataForecast.DailyForecasts[i].Night.IconPhrase +
-    '</p><br><img src="https://developer.accuweather.com/sites/default/files/' +
-    strZeroNight + dataForecast.DailyForecasts[i].Night.Icon + '-s.png" alt=""></div>' +
     '<div class="clearfix"></div><a href="' + dataForecast.DailyForecasts[i].Link +
     '" target="_blank" rel="noopener noreferrer">accuweather.com</a>';
 }
