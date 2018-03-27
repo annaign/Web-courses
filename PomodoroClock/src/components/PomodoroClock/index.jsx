@@ -14,7 +14,7 @@ export function PomodoroClock(props) {
 }
 
 PomodoroClock.propTypes = {
-  type: PropTypes.string,
+  type: PropTypes.string.isRequired,
   minutes: PropTypes.number.isRequired,
   seconds: PropTypes.number.isRequired
 };

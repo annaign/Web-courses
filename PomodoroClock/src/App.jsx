@@ -12,7 +12,8 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <div className="container">
-          <a className="headerLink"
+          <a
+            className="headerLink"
             target="_blank"
             rel="noopener noreferrer"
             href="https://en.wikipedia.org/wiki/Pomodoro_Technique"

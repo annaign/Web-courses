@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { PomodoroClock, InputRange } from '../../components';
-import { pomodoroMin, pomodoroMax, restMin, restMax } from '../../constants';
-import { pomodoroDuration, restDuration } from '../../constants';
+import {
+  pomodoroMin,
+  pomodoroMax,
+  restMin,
+  restMax,
+  pomodoroDuration,
+  restDuration
+} from '../../constants';
 import './style.css';
+import ring from '../../audio/sound.mp3';
 
 export default class PomodoroBlock extends React.Component {
   constructor(props) {
@@ -14,15 +21,9 @@ export default class PomodoroBlock extends React.Component {
       max: this.props.type === 'pomodoro' ? pomodoroMax : restMax,
       duration:
         this.props.type === 'pomodoro' ? pomodoroDuration : restDuration,
-      durationSeconds: 0,
-      startPomodoro: false
+      durationSeconds: 0
     };
   }
-
-  onChangeHandle = e => {
-    const newDuration = parseInt(e.target.value, 10);
-    this.setState({ duration: newDuration, durationSeconds: newDuration * 60 });
-  };
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.status === 'Start') {
@@ -33,6 +34,43 @@ export default class PomodoroBlock extends React.Component {
       this.onReset();
     }
   }
+
+  componentWillUnmount() {
+    this.onReset();
+  }
+
+  onChangeHandle = e => {
+    const newDuration = parseInt(e.target.value, 10);
+    this.setState({ duration: newDuration, durationSeconds: newDuration * 60 });
+  };
+
+  onStart = () => {
+    if (this.props.status !== 'Start') {
+      let durationSeconds;
+      if (this.state.durationSeconds > 0) {
+        durationSeconds = this.state.durationSeconds;
+      } else {
+        durationSeconds = this.state.duration * 60;
+      }
+
+      this.setState({ durationSeconds }, () => {
+        this.interval = setInterval(() => {
+          this.timer();
+        }, 1000);
+      });
+    }
+  };
+
+  onPause = () => {
+    clearInterval(this.interval);
+  };
+
+  onReset = () => {
+    clearInterval(this.interval);
+    this.setState({
+      durationSeconds: 0
+    });
+  };
 
   timer = () => {
     const time = this.state.durationSeconds - 1;
@@ -48,44 +86,8 @@ export default class PomodoroBlock extends React.Component {
   };
 
   playSound() {
-    let audio = new Audio('../../audio/sound.mp3');
+    let audio = new Audio(ring);
     audio.play();
-  }
-
-  onStart = nextStatus => {
-    if (this.props.status !== 'Start') {
-      let durationSeconds;
-      if (this.state.durationSeconds > 0) {
-        durationSeconds = this.state.durationSeconds;
-      } else {
-        durationSeconds = this.state.duration * 60;
-      }
-
-      this.setState({ startPomodoro: true, durationSeconds }, () => {
-        this.interval = setInterval(() => {
-          this.timer();
-        }, 1000);
-      });
-    }
-  };
-
-  onPause = () => {
-    clearInterval(this.interval);
-    this.setState({
-      startPomodoro: false
-    });
-  };
-
-  onReset = () => {
-    clearInterval(this.interval);
-    this.setState({
-      durationSeconds: 0,
-      startPomodoro: false
-    });
-  };
-
-  componentWillUnmount() {
-    this.onReset();
   }
 
   render() {
@@ -121,9 +123,9 @@ export default class PomodoroBlock extends React.Component {
 }
 
 PomodoroBlock.propTypes = {
-  type: PropTypes.oneOf(['pomodoro', 'rest']),
-  status: PropTypes.oneOf(['Start', 'Pause', 'Reset']),
+  type: PropTypes.oneOf(['pomodoro', 'rest']).isRequired,
+  status: PropTypes.oneOf(['Start', 'Pause', 'Reset']).isRequired,
   disabledInputRange: PropTypes.bool.isRequired,
   onSwitch: PropTypes.func.isRequired,
-  mute: PropTypes.oneOf(['on', 'off'])
+  mute: PropTypes.oneOf(['on', 'off']).isRequired
 };
