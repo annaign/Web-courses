@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tic Tac Toe Game</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="flex-container">
+    <header>
+      <h1>Tic Tac Toe Game</h1>
+      <hr>
+    </header>
+    <div class="content">
+      <div class="controlBlock">
+        <div class="inputBlock">
+          <div class="radioChoice">
+            <label for="choiceX">
+              <input type="radio" name="choice" id="choiceX" value="X">X</label>
+            <label for="choiceO">
+              <input type="radio" name="choice" id="choiceO" value="O">O</label>
+          </div>
+          <button class="btnReset">Reset</button>
+        </div>
+
+        <div class="scoreShow">Score: you -
+          <span></span>, computer -
+          <span></span>
+        </div>
+      </div>
+
+      <div class="gameField">
+        <div class="gameStart">START GAME</div>
+        <div class="gameOver">GAME OVER</div>
+        <div class="cell" id="00cell"></div>
+        <div class="cell" id="01cell"></div>
+        <div class="cell" id="02cell"></div>
+        <div class="cell" id="10cell"></div>
+        <div class="cell" id="11cell"></div>
+        <div class="cell" id="12cell"></div>
+        <div class="cell" id="20cell"></div>
+        <div class="cell" id="21cell"></div>
+        <div class="cell" id="22cell"></div>
+      </div>
+    </div>
+
+    <footer>Copyright &copy; 2018</footer>
+  </div>
+
+  <script src="./script.js "></script>
+</body>
+
+</html>

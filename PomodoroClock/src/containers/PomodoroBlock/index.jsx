@@ -27,10 +27,25 @@ export default class PomodoroBlock extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.status === 'Start') {
+      //play sound onClick
+      if (this.props.mute === 'off') {
+        this.playSound();
+      }
+
       this.onStart();
     } else if (nextProps.status === 'Pause') {
+      //play sound onClick
+      if (this.props.mute === 'off') {
+        this.playSound();
+      }
+
       this.onPause();
-    } else {
+    } else if (nextProps.status === 'Reset') {
+      //play sound onClick
+      if (this.props.mute === 'off') {
+        this.playSound();
+      }
+
       this.onReset();
     }
   }
