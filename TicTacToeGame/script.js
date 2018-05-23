@@ -83,11 +83,13 @@ function CheckGameOver() {
       gameStore.scorePlayer1 += 1;
       document.querySelectorAll('.scoreShow > span')[0].innerHTML =
         gameStore.scorePlayer1;
+        document.querySelector('.gameOver').innerHTML="YOU WIN";
     }
     if (checkMove === 2) {
       gameStore.scorePlayer2 += 1;
       document.querySelectorAll('.scoreShow > span')[1].innerHTML =
         gameStore.scorePlayer2;
+        document.querySelector('.gameOver').innerHTML="GAME OVER<br>Try again";
     }
 
     return true;
