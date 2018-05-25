@@ -3,6 +3,8 @@
 
 ## freeCodeCamp / [Front End Development Certification](https://www.freecodecamp.org)
 
+* [Build a Simon Game](https://github.com/annaign/Web-courses/tree/master/SimonGame "Simon Game")
+* [Build a Tic Tac Toe Game](https://github.com/annaign/Web-courses/tree/master/TicTacToeGame "TicTacToe Game")
 * [Build a Pomodoro Clock](https://github.com/annaign/Web-courses/tree/master/PomodoroClock "PomodoroClock")
 * [Build a JavaScript Calculator](https://github.com/annaign/Web-courses/tree/master/Calculator "Calculator")
 * [Build a Wikipedia Viewer](https://github.com/annaign/Web-courses/tree/master/WikipediaViewer "WikipediaViewer")
