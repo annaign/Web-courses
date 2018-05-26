@@ -1,3 +1,309 @@
 body {
   margin: 0;
+  background-color: lightgray;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+.fieldGame {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: 10px solid black;
+  border-radius: 50%;
+}
+
+.fieldBorder {
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-color: black;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.fieldTL {
+  border-top-left-radius: 100%;
+}
+
+.fieldTR {
+  border-top-right-radius: 100%;
+}
+
+.fieldBL {
+  border-bottom-left-radius: 100%;
+}
+
+.fieldBR {
+  border-bottom-right-radius: 100%;
+}
+
+.fieldColor {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+}
+
+.fieldGreen {
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+
+.fieldRed {
+  background-color: red;
+  border-top-right-radius: 100%;
+}
+
+.fieldBlue {
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+
+.fieldYellow {
+  background-color: yellow;
+  border-bottom-left-radius: 100%;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  top: 130px;
+  left: 130px;
+  width: 240px;
+  height: 240px;
+  background-color: white;
+  border: 20px solid black;
+  border-radius: 50%;
+}
+
+.gameName {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.linkToWiki {
+  align-self: center;
+  text-decoration-line: none;
+  color: black;
+}
+
+.linkToWiki > sup {
+  font-size: 15px;
+}
+
+.linkToWiki:hover {
+  text-decoration-line: underline;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.countDisplay {
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+
+.btnAreaBig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 70px;
+  height: 60px;
+}
+
+.btnAreaSmall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40px;
+  height: 60px;
+}
+
+.btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.btnStart {
+  background-color: red;
+}
+
+.btnStrict {
+  background-color: yellow;
+}
+
+.btnStrictPoint {
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: black;
+}
+
+.btnStrictOn {
+  background-color: red;
+}
+
+.switchBtn {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.inputRange {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height: 25px;
+  box-sizing: border-box;
+  background-color: black;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
+.gameOff {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: lightskyblue;
+  border-radius: 10%;
+}
+
+.gameOn {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: lightskyblue;
+  border-radius: 10%;
+}
+
+.fieldGreen:hover,
+.fieldRed:hover,
+.fieldBlue:hover,
+.fieldYellow:hover,
+.switchBtn:hover,
+.btn:hover {
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 10px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #333333;
+  opacity: 0.8;
+  color: #ffefd5;
+}
+
+@media screen and (max-width: 550px) {
+  .fieldGame {
+    width: 300px;
+    height: 300px;
+    border: 5px solid black;
+  }
+
+  .fieldBorder {
+    width: 140px;
+    height: 140px;
+    border-width: 5px;
+  }
+
+  .fieldColor {
+    width: 140px;
+    height: 140px;
+  }
+
+  .control {
+    top: 80px;
+    left: 80px;
+    width: 140px;
+    height: 140px;
+    border: 5px solid black;
+  }
+
+  .gameName {
+    font-size: 20px;
+  }
+
+  .linkToWiki > sup {
+    font-size: 10px;
+  }
+
+  .buttons,
+  .switchBtn {
+    font-size: 12px;
+  }
+
+  .countDisplay {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .btnAreaBig {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btnAreaSmall {
+    width: 30px;
+    height: 50px;
+  }
+
+  .btn {
+    width: 20px;
+    height: 20px;
+  }
+
+  .switchBtn {
+    margin-top: 2px;
+  }
+
+  .inputRange {
+    margin: 0 3px;
+    width: 40px;
+    height: 20px;
+  }
 }
