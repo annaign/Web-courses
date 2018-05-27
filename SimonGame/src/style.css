@@ -26,6 +26,7 @@ body {
   height: 500px;
   border: 10px solid black;
   border-radius: 50%;
+  background-color: black;
 }
 
 .fieldBorder {
@@ -59,23 +60,23 @@ body {
   height: 230px;
 }
 
-.fieldGreen {
-  background-color: green;
+.greenField {
+  background-color: darkgreen;
   border-top-left-radius: 100%;
 }
 
-.fieldRed {
-  background-color: red;
+.redField {
+  background-color: darkred;
   border-top-right-radius: 100%;
 }
 
-.fieldBlue {
-  background-color: blue;
+.blueField {
+  background-color: darkblue;
   border-bottom-right-radius: 100%;
 }
 
-.fieldYellow {
-  background-color: yellow;
+.yellowField {
+  background-color: darkgoldenrod;
   border-bottom-left-radius: 100%;
 }
 
@@ -216,13 +217,21 @@ body {
   border-radius: 10%;
 }
 
-.fieldGreen:hover,
-.fieldRed:hover,
-.fieldBlue:hover,
-.fieldYellow:hover,
-.switchBtn:hover,
+.greenField:hover,
+.redField:hover,
+.blueField:hover,
+.yellowField:hover,
+.inputRange:hover,
 .btn:hover {
   cursor: pointer;
+}
+
+.unableClick {
+  pointer-events: none;
+}
+
+.unableClick:hover {
+  cursor: auto;
 }
 
 footer {

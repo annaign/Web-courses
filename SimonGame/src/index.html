@@ -5,33 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>App</title>
+  <title>Simon Game</title>
 </head>
 
 <body>
+  <noscript>
+    Ваш браузер не поддерживает JavaScript или поддержка отключена в настройках.
+  </noscript>
+
   <div class="flex-container">
     <div class="content">
       <div class="fieldGame">
         <div class="fieldBorder fieldTL">
-          <div class="fieldColor fieldGreen"></div>
+          <div class="fieldColor greenField unableClick" data-color="green"></div>
         </div>
         <div class="fieldBorder fieldTR">
-          <div class="fieldColor fieldRed"></div>
+          <div class="fieldColor redField unableClick" data-color="red"></div>
         </div>
         <div class="fieldBorder fieldBL">
-          <div class="fieldColor fieldYellow"></div>
+          <div class="fieldColor yellowField unableClick" data-color="yellow"></div>
         </div>
         <div class="fieldBorder fieldBR">
-          <div class="fieldColor fieldBlue"></div>
+          <div class="fieldColor blueField unableClick" data-color="blue"></div>
         </div>
 
         <div class="control">
           <div class="gameName">
-            <a class="linkToWiki" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Simon_(game)">Simon<sup>&reg;</sup></a>
+            <a class="linkToWiki" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Simon_(game)">Simon
+              <sup>&reg;</sup>
+            </a>
           </div>
           <div class="buttons">
             <div class="btnAreaBig">
-              <div class="countDisplay">- -</div>
+              <div class="countDisplay"></div>
               <span>COUNT</span>
             </div>
             <div class="btnAreaSmall">
@@ -44,7 +50,10 @@
               <span>Strict</span>
             </div>
           </div>
-          <div class="switchBtn">OFF<div class="inputRange"><div class="gameOff"></div></div>ON</div>
+          <div class="switchBtn">OFF
+            <div class="inputRange">
+              <div class="gameOff"></div>
+            </div>ON</div>
         </div>
       </div>
     </div>
