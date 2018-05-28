@@ -17,8 +17,3 @@
 
 * [Build a web store](https://github.com/annaign/Web-courses/tree/master/ShopForest "ShopForest")
 * [Layout: web store](https://github.com/annaign/Web-courses/tree/master/ShopLayout "ShopLayout")
-
-
-## openedu.ru / [Веб-программирование](https://openedu.ru/course/ITMOUniversity/WEBDEV/)
-
-* [Layout: a simple page](https://github.com/annaign/Web-courses/tree/master/Final%20project%20(web%20page) "Final project (web page)")
