@@ -1,159 +1,171 @@
 'use strict';
 var maxNumLength = 9;
-var calcMemory = "";
-var calcText = "";
+var calcMemory = '';
+var calcText = '';
 var dot = false;
 var btnAct = false;
 var result = null;
 var number = null;
 var act = null;
+var actTemp = null;
 
-var maxNum = "";
+var maxNum = '';
 for (let i = 1; i <= maxNumLength; i++) {
-	maxNum = maxNum + "9";
+  maxNum = maxNum + '9';
 }
 maxNum = +maxNum;
 
 function btnClear() {
-	calcMemory = "";
-	calcText = "";
-	dot = false;
-	btnAct = false;
-	result = null;
-	number = null;
-	act = null;
+  calcMemory = '';
+  calcText = '0';
+  dot = false;
+  btnAct = false;
+  result = null;
+  number = null;
+  act = null;
+  actTemp = null;
 
-	changeCalcText(calcText);
-	changeCalcMemory(calcMemory);
+  changeCalcText(calcText);
+  changeCalcMemory(calcMemory);
 }
 
 function changeCalcText(str) {
-	document.getElementById('js-textField').innerHTML = str;
+  document.getElementById('display').innerHTML = str;
 }
 
 function changeCalcMemory(str) {
-	calcMemory = calcMemory + str;
+  calcMemory = calcMemory + str;
 
-	if (typeof result === "number") {
-		document.getElementById('js-memoryField').innerHTML = calcMemory + " = " + result;
-	} else {
-		document.getElementById('js-memoryField').innerHTML = calcMemory + " = " + calcText;
-	}
+  if (typeof result === 'number') {
+    document.getElementById('js-memoryField').innerHTML =
+      calcMemory + ' = ' + result;
+  } else {
+    document.getElementById('js-memoryField').innerHTML =
+      calcMemory + ' = ' + calcText;
+  }
 }
 
 function btnNumber() {
-	let currentSumbol = event.target.textContent;
+  if (btnAct) {
+    btnAct = false;
 
-	if (currentSumbol === '.') {
-		if (!dot) {
-			dot = true;
-			if (calcText.length === 0) {
-				currentSumbol = "0" + currentSumbol;
-			}
-		} else {
-			return;
-		}
-	}
+    number = parseFloat(calcText);
+    calcText = '';
+    dot = false;
 
-	if (calcText.length >= maxNumLength) {
-		return;
-	}
+    if (typeof result === 'number') {
+      calc();
+    } else {
+      result = number;
+    }
 
-	btnAct = false;
-	calcText = calcText + currentSumbol;
+    act = actTemp;
+    changeCalcMemory(act);
+  }
 
-	changeCalcText(calcText);
-	changeCalcMemory(currentSumbol);
+  let currentSumbol = event.target.textContent;
+
+  if (currentSumbol === '.') {
+    if (!dot) {
+      dot = true;
+      if (calcText.length === 0 || calcText === '0') {
+        currentSumbol = '0' + currentSumbol;
+      }
+    } else {
+      return;
+    }
+  }
+
+  if (calcText.length >= maxNumLength) {
+    return;
+  }
+
+  if (calcText === '0' && currentSumbol === '0') {
+    return;
+  }
+
+  if (calcText === '0') {
+    calcText = currentSumbol;
+
+    if (calcText === '.') {
+      calcText = '0.';
+    }
+  } else {
+    calcText = calcText + currentSumbol;
+  }
+
+  changeCalcMemory(currentSumbol);
+  changeCalcText(calcText);
 }
 
 function btnAction() {
-	let currentSumbol = event.target.textContent;
+  btnAct = true;
+  actTemp = event.target.textContent;
 
-	if (btnAct || calcText.length === 0) {
-		return;
-	}
-
-	number = parseFloat(calcText);
-
-	if (typeof result !== "number") {
-		result = number;
-	} else {
-		if (!calc()) {
-			return;
-		}
-	}
-
-	act = currentSumbol;
-	btnAct = true;
-	calcText = "";
-	dot = false;
-
-	changeCalcMemory(currentSumbol);
-	changeCalcText(currentSumbol);
+  changeCalcText(actTemp);
 }
 
 function calc() {
-	switch (act) {
-		case "+":
-			result = +(result + number).toFixed(maxNumLength - 1);
-			break;
-		case "−":
-			result = +(result - number).toFixed(maxNumLength - 1);
-			break;
-		case "∗":
-			result = +(result * number).toFixed(maxNumLength - 1);
-			break;
-		case "/":
-			result = +(result / number).toFixed(maxNumLength - 1);
-			break;
-	}
+  switch (act) {
+    case '+':
+      result = +(result + number).toFixed(maxNumLength - 1);
+      break;
+    case '−':
+      result = +(result - number).toFixed(maxNumLength - 1);
+      break;
+    case '∗':
+      result = +(result * number).toFixed(maxNumLength - 1);
+      break;
+    case '/':
+      result = +(result / number).toFixed(maxNumLength - 1);
+      break;
+  }
 
-	if (result > maxNum) {
-		btnClear();
-		changeCalcText("Out of range");
+  if (result > maxNum) {
+    btnClear();
+    changeCalcText('Out of range');
 
-		return false;
-	}
+    return false;
+  }
 
-	if (Math.abs(result).toString().length > maxNumLength) {
-		let temp = Math.abs(result).toString();
-		let i = 0;
-		while (temp[i] !== "." && i < temp.length) {
-			i++;
-		}
+  if (Math.abs(result).toString().length > maxNumLength) {
+    let temp = Math.abs(result).toString();
+    let i = 0;
+    while (temp[i] !== '.' && i < temp.length) {
+      i++;
+    }
 
-		result = +result.toFixed(maxNumLength - i);
-	}
+    result = +result.toFixed(maxNumLength - i);
+  }
 
-	return true;
+  return true;
 }
 
 function btnCalculate() {
-	if (result === null || calcText === "") {
-		return;
-	}
+  if (result === null || calcText === '') {
+    return;
+  }
 
-	number = parseFloat(calcText);
+  number = parseFloat(calcText);
 
-	if (calc()) {
-		calcText = result;
+  if (calc()) {
+    calcText = result;
 
-		changeCalcText(calcText);
-		changeCalcMemory("");
+    changeCalcText(calcText);
+    changeCalcMemory('');
 
 		calcMemory = result;
+		
+    let temp = result.toString();
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i] === '.') {
+        dot = true;
+        break;
+      }
+    }
 
-		let temp = result.toString();
-		let i = 0;
-		while (i < temp.length) {
-			if (temp[i] === ".") {
-				dot = true;
-				break;
-			}
-			i++;
-		}
-
-		btnAct = false;
-		result = null;
-	}
+    btnAct = false;
+    result = null;
+    act = null;
+  }
 }
