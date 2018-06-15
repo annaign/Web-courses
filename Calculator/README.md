@@ -1,4 +1,4 @@
-#  Build a JavaScript Calculator with immediate execution logic
+#  JavaScript Calculator with immediate execution logic
 
 ## User Story
 
