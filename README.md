@@ -1,5 +1,8 @@
 # Web-courses
 
+## Макеты [htmlacademy](https://htmlacademy.ru)
+
+* [Pink](https://github.com/annaign/Web-courses/tree/master/pink)
 
 ## freeCodeCamp / [Front End Development Certification](https://www.freecodecamp.org)
 
@@ -11,7 +14,6 @@
 * [Show the Local Weather](https://github.com/annaign/Web-courses/tree/master/LocalWeather "LocalWeather")
 * [Build a Random Quote Machine](https://github.com/annaign/Web-courses/tree/master/RandomQuoteMachine "RandomQuoteMachine")
 * [Build a Tribute Page](https://github.com/annaign/Web-courses/tree/master/Tribute%20page "Tribute page")
-
 
 ## geekbrains.ru / [Интерактивный видеокурс по HTML/CSS](https://geekbrains.ru)
 
