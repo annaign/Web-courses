@@ -12,3 +12,47 @@
 8. Кроссбраузерность: Chrome, Firefox, Opera, Safari, Edge и IE11.
 9. Типографика: частично определена в макете (прочее — на усмотрение разработчика).
 10. Используемый шрифт: Open Sans.
+
+## Установка
+
+Склонируйте или загрузите репозиторий:
+
+```bash
+git clone https://github.com/annaign/Web-courses.git
+```
+
+Проект находится в папке pink. Установите зависимости командой:
+
+```bash
+npm install
+```
+
+или
+
+```bash
+yarn install
+```
+
+Запуск dev-сервера:
+
+```bash
+npm run start
+```
+
+или
+
+```bash
+yarn start
+```
+
+## Сборка проекта
+
+```bash
+npm run build
+```
+
+или
+
+```bash
+yarn build
+```
