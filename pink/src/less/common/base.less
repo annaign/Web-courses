@@ -1,0 +1,54 @@
+body {
+  min-width: @media_mobile;
+  font-family: @font_p;
+  font-size: 14px;
+  color: @color-dark_blue;
+  background-color: @color-white;
+
+  @media (min-width: @media_tablet) {
+    font-size: 18px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.b_container {
+  box-sizing: border-box;
+  width: @media_mobile;
+  margin: 0 auto;
+  padding: 0 @mobile_padding;
+
+  @media (min-width: @media_tablet) {
+    width: @media_tablet;
+    padding: 0 @tablet_padding;
+  }
+
+  @media (min-width: @media_desktop) {
+    width: @media_desktop;
+    padding: 0 @desktop_padding;
+  }
+}
+
+.b_vHiddden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

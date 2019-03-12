@@ -8,33 +8,68 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <header class="header">
-      <a>
-        <img class="header__logoImg" src="./img/logo-pink-white-mobile.svg0" width="75" height="22" alt="Pink логотип" />
-      </a>
-      <nav class="mainNav">
-        <button class="mainNav__toggle" type="button">Открыть меню</button>
-        <ul class="mainNav__list navList">
-          <li class="navList _active"><a href="./index.html">Главная</a></li>
-          <li class="navList"><a>Фотографии</a></li>
-          <li class="navList"><a href="./competition.html">Конкурс</a></li>
-          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML Academy</a>
+    <!-- для svg-спрайта -->
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="header b_container no-js">
+      <nav class="mainNav _open">
+        <div class="mainNav__wrap">
+          <a class="mainNav__logo" href="./index.html">
+            <span class="b_vHiddden">Pink логотип</span>
+            <svg class="mainNav__img _mobile" width="75" height="22">
+              <use xlink:href="#logo-pink-white-mobile"></use>
+            </svg>
+            <svg class="mainNav__img _tablet" width="147" height="40">
+              <use xlink:href="#logo-pink-white-tablet"></use>
+            </svg>
+            <svg class="mainNav__img _desktop" width="147" height="40">
+              <use xlink:href="#logo-pink-white-desktop"></use>
+            </svg>
+          </a>
+
+          <button class="mainNav__btn _open" type="button">
+            <span class="b_vHiddden">Открыть меню</span>
+            <svg class="mainNav__icon" width="50" height="24">
+              <use xlink:href="#icon-menu-burger"></use>
+            </svg>
+          </button>
+          <button class="mainNav__btn _close" type="button">
+            <span class="b_vHiddden">Закрыть меню</span>
+            <svg class="mainNav__icon" width="24" height="23">
+              <use xlink:href="#icon-menu-cross"></use>
+            </svg>
+          </button>
+        </div>
+
+        <ul class="mainNav__menu">
+          <li class="mainNav__menuItem">
+            <a href="./index.html" class="mainNav__menuLink">Главная</a>
+          </li>
+          <li class="mainNav__menuItem">
+            <a class="mainNav__menuLink _current">Фотографии</a>
+          </li>
+          <li class="mainNav__menuItem">
+            <a class="mainNav__menuLink" href="./competition.html">Конкурс</a>
+          </li>
+          <li class="mainNav__menuItem">
+            <a class="mainNav__menuLink" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noopener noreferrer">HTML Academy</a>
+          </li>
         </ul>
       </nav>
+
+      <section class="b_container">
+        <h1 class="header__h1">
+          Фотографии<br />
+          пользователей
+        </h1>
+      </section>
     </header>
 
     <main>
-      <h1 class="visuallyHiddden">Фотографии</h1>
-
       <section>
-        <h2>
-          Фотографии<br />
-          пользователей
-        </h2>
-      </section>
-
-      <section>
-        <h3 class="visuallyHiddden">Фото дня</h3>
+        <h2 class="b_vHiddden">Фото дня</h2>
         <p>
           Взгляните на фотографии, которые выкладывают пользователи!<br />
           Видите, как не хватает ваших?
@@ -117,7 +152,7 @@
       </section>
 
       <section>
-        <h3 class="visuallyHiddden">Фоторедактор</h3>
+        <h2 class="b_vHiddden">Фоторедактор</h2>
         <form>
           <input type="file" />
           <label><img src="" alt="Загруженное изображение"/></label>
@@ -155,5 +190,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>

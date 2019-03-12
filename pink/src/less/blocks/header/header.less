@@ -1,0 +1,100 @@
+.header {
+  box-sizing: border-box;
+  min-height: 237px;
+  padding-top: 80px;
+  padding-bottom: 35px;
+  background-color: @color-dark_blue2;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;
+  color: @color-white;
+
+  @media (max-width: @media_tablet - @maxwidth_delta) {
+    background-image: url("@{path_img}bg-back-mobile@1x.jpg");
+  }
+
+  @media (min-width: @media_tablet) and (max-width: @media_desktop - @maxwidth_delta) {
+    min-height: 440px;
+    background-image: url("@{path_img}bg-back-tablet@1x.jpg");
+  }
+
+  @media (min-width: @media_desktop) {
+    min-height: 394px;
+    background-image: url("@{path_img}bg-back-desktop@1x.jpg");
+  }
+
+  &._main {
+    min-height: 462px;
+    background-position: right bottom, center top;
+
+    @media (max-width: @media_tablet - @maxwidth_delta) {
+      background-image: url("@{path_img}iphone-hand-mobile@1x.png"), url("@{path_img}bg-back-mobile@1x.jpg");
+      background-size: auto, auto 462px;
+      background-position: left top 175px, center top;
+    }
+
+    @media (min-width: @media_tablet) and (max-width: @media_desktop - @maxwidth_delta) {
+      min-height: 729px;
+      background-image: url("@{path_img}iphone-hand-tablet@1x.png"), url("@{path_img}bg-back-tablet@1x.jpg");
+    }
+
+    @media (min-width: @media_desktop) {
+      min-height: 853px;
+      background-image: url("@{path_img}iphone-hand-desktop@1x.png"), url("@{path_img}bg-back-desktop@1x.jpg");
+    }
+  }
+
+  &.b_container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.header__h1 {
+  margin-top: 36px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+
+  @media (min-width: @media_tablet) {
+    margin-top: 80px;
+    font-size: 50px;
+  }
+
+  @media (min-width: @media_desktop) {
+    margin-top: 70px;
+  }
+}
+
+.no-js.header {
+  @media (max-width: @media_tablet - @maxwidth_delta) {
+    padding-top: 0;
+    min-height: 170px + 359px;
+    background-position: center top 359px - 70px;
+  }
+
+  @media (min-width: @media_tablet) and (max-width: @media_desktop - @maxwidth_delta) {
+    padding-top: 0;
+    min-height: 330px + 377px;
+    background-position: center top 377px - 110px;
+  }
+
+  &._main {
+    @media (max-width: @media_tablet - @maxwidth_delta) {
+      min-height: 237px - 63px + 359px;
+      background-position: left top 175px + 359px - 63px, center top 359px - 63px;
+    }
+
+    @media (min-width: @media_tablet) and (max-width: @media_desktop - @maxwidth_delta) {
+      min-height: 620px + 377px;
+      background-position: right bottom, center top 377px - 110px;
+    }
+  }
+
+  .mainNav {
+    @media (max-width: @media_desktop - @maxwidth_delta) {
+      position: static;
+    }
+  }
+}
