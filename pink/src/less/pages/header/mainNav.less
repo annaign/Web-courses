@@ -59,10 +59,14 @@
 .mainNav__logo {
   display: block;
 
+  &[href]:hover,
+  &[href]:focus {
+    outline: none;
+  }
+
   &[href]:hover .mainNav__img,
   &[href]:focus .mainNav__img {
     color: @color-red;
-    outline: none;
   }
 
   &[href]:active .mainNav__img {

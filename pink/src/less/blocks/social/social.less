@@ -1,0 +1,37 @@
+.social {
+  display: flex;
+}
+
+.social__icon {
+  display: flex;
+  box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  margin-left: 18px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid @color-dark_blue_10;
+  border-radius: 50%;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    border-color: @color-dark_blue;
+    outline: none;
+  }
+
+  &[href]:active {
+    border-color: @color-dark_blue_10;
+  }
+
+  &[href]:active .social__img {
+    opacity: 0.3;
+  }
+}
+
+.social__img {
+  color: @color-red;
+}
