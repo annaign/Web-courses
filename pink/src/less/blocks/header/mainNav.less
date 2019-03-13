@@ -59,13 +59,13 @@
 .mainNav__logo {
   display: block;
 
-  &:hover .mainNav__img,
-  &:focus .mainNav__img {
+  &[href]:hover .mainNav__img,
+  &[href]:focus .mainNav__img {
     color: @color-red;
     outline: none;
   }
 
-  &:active .mainNav__img {
+  &[href]:active .mainNav__img {
     color: #ffffff;
     opacity: 0.3;
   }
@@ -170,13 +170,13 @@
     text-transform: none;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: @color-red;
     outline: none;
   }
 
-  &:active {
+  &[href]:active {
     color: @color-white;
     opacity: 0.3;
   }
