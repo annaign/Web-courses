@@ -228,6 +228,8 @@ button:-moz-focusring,
  */
 
 fieldset {
+  margin-left: 0;
+  margin-right: 0;
   padding: 0.35em 0.75em 0.625em;
 }
 
@@ -241,7 +243,7 @@ fieldset {
 legend {
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
-  display: table; /* 1 */
+  //display: table; /* 1 - проблемы с visually hidden */
   max-width: 100%; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */

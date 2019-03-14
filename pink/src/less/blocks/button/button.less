@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  min-width: 280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &._green {
+    text-transform: uppercase;
+    color: @color-white;
+    background-color: @color-green;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: @color-green2;
+    }
+
+    &:active {
+      color: @color-white_30;
+    }
+
+    &:disabled {
+      background-color: @color-gray;
+      cursor: not-allowed;
+    }
+  }
+}
