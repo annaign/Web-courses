@@ -42,6 +42,36 @@ h2 {
   }
 }
 
+.b-containerWidth {
+  box-sizing: border-box;
+  width: @media_mobile;
+  margin: 0 auto;
+
+  @media (min-width: @media_tablet) {
+    width: @media_tablet;
+  }
+
+  @media (min-width: @media_desktop) {
+    width: @media_desktop;
+  }
+}
+
+.b-containerPad {
+  box-sizing: border-box;
+  padding-left: @mobile_padding;
+  padding-right: @mobile_padding;
+
+  @media (min-width: @media_tablet) {
+    padding-left: @tablet_padding;
+    padding-right: @tablet_padding;
+  }
+
+  @media (min-width: @media_desktop) {
+    padding-left: @desktop_padding;
+    padding-right: @desktop_padding;
+  }
+}
+
 .b_vHidden {
   .visuallyHidden();
 }

@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
   var btnOpen = document.querySelector(".mainNav__btn._open");
   var btnClose = document.querySelector(".mainNav__btn._close");
   var mainNav = document.querySelector(".mainNav");
-  var no_jsArr = document.querySelector(".no-js");
+  var no_jsArr = document.querySelectorAll(".no-js");
 
-  no_jsArr.classList.remove("no-js");
+  for (var i = 0; i < no_jsArr.length; i++) {
+    no_jsArr[i].classList.remove("no-js");
+  }
+
   btnOpen.classList.add("_active");
   mainNav.classList.remove("_open");
 
@@ -23,4 +26,17 @@ document.addEventListener("DOMContentLoaded", function() {
     btnOpen.classList.add("_active");
     mainNav.classList.remove("_open");
   });
+
+  var imgEditors = document.querySelectorAll(".postForm__editor");
+
+  for (var i = 0; i < imgEditors.length; i++) {
+    imgEditors[i].addEventListener("click", function(evt) {
+      evt.preventDefault();
+
+      if (!this.classList.contains("_active")) {
+        document.querySelector(".postForm__editor._active").classList.remove("_active");
+        this.classList.add("_active");
+      }
+    });
+  }
 });

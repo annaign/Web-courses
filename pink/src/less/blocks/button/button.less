@@ -1,7 +1,6 @@
 .button {
   display: block;
   box-sizing: border-box;
-  min-width: 280px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 30px;
@@ -16,6 +15,7 @@
   }
 
   &._green {
+    min-width: 280px;
     text-transform: uppercase;
     color: @color-white;
     background-color: @color-green;
@@ -33,6 +33,49 @@
     &:disabled {
       background-color: @color-gray;
       cursor: not-allowed;
+    }
+  }
+
+  &._upload {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: @color-red;
+    background-color: transparent;
+    font-size: 18px;
+    border: 3px solid @color-red;
+    border-radius: 35px;
+
+    &:hover,
+    &:focus {
+      color: @color-white;
+      background-color: @color-red;
+    }
+
+    &:active {
+      color: @color-white_30;
+      background-color: @color-red;
+    }
+  }
+
+  &._cancel {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: @color-dark_blue_10;
+    background-color: transparent;
+    font-size: 18px;
+    border: 3px solid @color-dark_blue_10;
+    border-radius: 35px;
+
+    &:hover,
+    &:focus {
+      color: @color-dark_blue_30;
+      border-color: @color-dark_blue_30;
+    }
+
+    &:active {
+      color: @color-white_30;
+      background-color: @color-dark_blue_30;
+      border-color: transparent;
     }
   }
 }

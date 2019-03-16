@@ -1,0 +1,294 @@
+.postForm {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: @mobile_padding;
+  padding-right: @mobile_padding;
+  background-color: @color-gray2;
+
+  @media (min-width: @media_tablet) {
+    display: flex;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: @tablet_padding;
+    padding-right: @tablet_padding;
+  }
+
+  @media (min-width: @media_desktop) {
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+}
+
+.postForm__wrap {
+  @media (min-width: @media_desktop) {
+    padding-left: @desktop_padding;
+    padding-right: @desktop_padding;
+  }
+}
+
+.postForm__img {
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @media_tablet) {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+
+    @media (min-width: @media_tablet) {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}
+
+.postForm__controls {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @media (min-width: @media_tablet) {
+    margin-left: 45px;
+  }
+
+  @media (min-width: @media_desktop) {
+    margin-left: 90px;
+  }
+}
+
+.postForm__list {
+  position: relative;
+  display: flex;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  @media (min-width: @media_tablet) {
+    flex-direction: column;
+  }
+}
+
+.postForm__editor {
+  display: flex;
+  box-sizing: border-box;
+  height: 70px + 70px;
+  padding-right: 20px;
+  padding-bottom: 70px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid @color-dark_blue_10;
+
+  @media (min-width: @media_tablet) {
+    height: 70px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @media_desktop) {
+    padding-right: 30px;
+  }
+
+  input[type="range"] {
+    position: absolute;
+    display: none;
+    top: 70px + 70px / 2;
+    left: 0;
+    -webkit-appearance: none; /* Hides the Track */
+    width: 100%;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media (min-width: @media_tablet) {
+      position: static;
+      display: block;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    /* Styling the Track: Chrome, Opera */
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 2px;
+      background-color: @color-dark_blue;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Styling the Thumb: Chrome, Opera */
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      box-sizing: border-box;
+      margin-top: -14px / 2;
+      width: 14px;
+      height: 14px;
+      background-color: @color-gray2;
+      border: 2px solid @color-red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:focus::-webkit-slider-thumb {
+      background-color: @color-red;
+    }
+
+    &:focus::-webkit-slider-runnable-track {
+      background-color: @color-red;
+    }
+
+    &:active::-webkit-slider-runnable-track {
+      background-color: @color-dark_blue;
+    }
+
+    /* Styling the Track: Firefox */
+    &::-moz-range-track {
+      width: 100%;
+      height: 2px;
+      background-color: @color-dark_blue;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Styling the Thumb: Firefox */
+    &::-moz-range-thumb {
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      background-color: @color-gray2;
+      border: 2px solid @color-red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:focus::-moz-range-thumb {
+      background-color: @color-red;
+    }
+
+    &:focus::-moz-range-track {
+      background-color: @color-red;
+    }
+
+    &:active::-moz-range-track {
+      background-color: @color-dark_blue;
+    }
+
+    /* Styling the Track: IE */
+    &::-ms-track {
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+      color: transparent;
+      border-color: transparent;
+      border-width: (14px / 2) 0;
+      cursor: pointer;
+    }
+
+    &::-ms-fill-lower {
+      background-color: @color-dark_blue;
+      border: none;
+    }
+
+    &::-ms-fill-upper {
+      background-color: @color-dark_blue;
+      border: none;
+    }
+
+    /* Styling the Thumb: IE */
+    &::-ms-thumb {
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      margin-top: 0;
+      background-color: @color-gray2;
+      border: 2px solid @color-red;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &:focus::-ms-thumb {
+      background-color: @color-red;
+    }
+
+    &:focus::-ms-fill-lower {
+      background-color: @color-red;
+    }
+
+    &:focus::-ms-fill-upper {
+      background-color: @color-red;
+    }
+
+    &:active::-ms-fill-lower {
+      background-color: @color-dark_blue;
+    }
+
+    &:active::-ms-fill-upper {
+      background-color: @color-dark_blue;
+    }
+  }
+
+  &._active {
+    @media (max-width: @media_tablet - @maxwidth_delta) {
+      .postForm__icon {
+        color: @color-red;
+      }
+
+      input[type="range"] {
+        display: block;
+      }
+    }
+  }
+}
+
+.postForm__icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin-right: 30px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  color: @color-dark_blue_30;
+  cursor: pointer;
+
+  @media (min-width: @media_tablet) {
+    color: @color-red;
+  }
+
+  &:hover,
+  &:focus {
+    color: @color-dark_blue_50;
+  }
+}
+
+.postForm__buttons {
+  display: flex;
+  padding-top: 35px;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @media_tablet) {
+    margin-top: auto;
+    padding-top: 0;
+  }
+
+  @media (min-width: @media_desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .button._cancel {
+    margin-top: 15px;
+
+    @media (min-width: @media_tablet) {
+      margin-top: 24px;
+    }
+
+    @media (min-width: @media_desktop) {
+      margin-top: 0;
+    }
+  }
+}
