@@ -1,6 +1,9 @@
 .photoCard {
-  background-color: @color-gray2;
+  display: flex;
   width: 280px;
+  height: 100%;
+  flex-direction: column;
+  background-color: @color-gray2;
 
   @media (min-width: @media_tablet) {
     width: 300px;
@@ -77,22 +80,25 @@
 .photoCard__text {
   display: flex;
   box-sizing: border-box;
+  height: 100%;
   padding: 25px 20px;
   flex-direction: column;
   background-color: @color-gray2;
   overflow: hidden;
 
   @media (min-width: @media_tablet) {
-    height: 155px;
+    min-height: 155px;
     padding: 30px;
   }
 
   &._todayPhoto {
     position: relative;
-    height: auto;
+    min-height: initial;
 
     .photoCard__p {
-      margin-bottom: 0;
+      @media (min-width: @media_tablet) {
+        margin-bottom: 0;
+      }
     }
   }
 }
