@@ -1,0 +1,39 @@
+.photos {
+}
+
+.photos__header {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  @media (min-width: @media_tablet) {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  p {
+    margin: 0;
+    line-height: 30px;
+  }
+}
+
+.photos__list {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+
+  @media (min-width: @media_tablet) {
+    margin-top: 50px;
+  }
+
+  li {
+    margin-bottom: 20px;
+
+    @media (min-width: @media_desktop) {
+      margin-bottom: 50px;
+    }
+  }
+}
