@@ -87,123 +87,224 @@
     </header>
 
     <main>
-      <section class="aboutApp b-container">
-        <h2 class="b_vHidden">О приложении</h2>
-        <p>Устали от серости мегаполиса?</p>
-        <p>Нам есть, что вам предложить!</p>
-        <ul>
-          <li>
-            <h3>Поднимает настроение</h3>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li>
-            <h3>Меняет мир вокруг</h3>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li>
-            <h3>Заводит новых друзей</h3>
-            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
+      <section class="advantages">
+        <div class="advantages__header b-container">
+          <h2 class="b_vHidden">О приложении</h2>
+          <p class="advantages__h _first">Устали от серости мегаполиса?</p>
+          <p class="advantages__h">
+            Нам есть, что вам<br />
+            предложить!
+          </p>
+        </div>
+
+        <div class="b-containerWidth">
+          <ul class="advantages__list b-containerPad grayBorder">
+            <li class="advantages__item">
+              <picture class="advantages__picture _joy">
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-1-desktop@1x.png 1x" />
+                <source media="(min-width: 768px)" srcset="img/iphone-screen-1-tablet@1x.png 1x" />
+                <img src="./img/iphone-screen-mobile@1x.png" width="157" height="282" alt="Скриншот экрана приложения Pink" />
+              </picture>
+              <h3>Поднимает настроение</h3>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="advantages__item">
+              <picture class="advantages__picture _peace">
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-2-desktop@1x.png 1x" />
+                <source media="(min-width: 768px)" srcset="img/iphone-screen-2-tablet@1x.png 1x" />
+                <img src="./img/iphone-screen-mobile@1x.png" width="157" height="282" alt="Скриншот экрана приложения Pink" />
+              </picture>
+              <h3>Меняет мир вокруг</h3>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="advantages__item">
+              <picture class="advantages__picture _friends">
+                <source media="(min-width: 1200px)" srcset="img/iphone-screen-3-desktop@1x.png 1x" />
+                <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png 1x" />
+                <img src="./img/iphone-screen-mobile@1x.png" width="157" height="282" alt="Скриншот экрана приложения Pink" />
+              </picture>
+              <h3>Заводит новых друзей</h3>
+              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="b-containerWidth">
+          <div class="advantages__research b-containerPad">
+            <div class="advantages__timer">
+              <h2 class="b_vHidden">Исследования</h2>
+              <p class="advantages__h2">Эффект <br />на 24 часа!</p>
+              <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <p><a href="#">Узнать больше об исследовании</a></p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="research">
-        <h2 class="b_vHidden">Исследования</h2>
-        <p>Эффект на 24 часа!</p>
-        <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a href="#">Узнать больше об исследовании</a>
-      </section>
-
-      <section class="reviews">
+      <section class="comments b-container b-slider">
         <h2 class="b_vHidden">Отзывы</h2>
-        <button type="button">Предыдущий отзыв</button>
-        <button type="button">Следующий отзыв</button>
-        <ul>
-          <li>
-            <blockquote>
+        <button class="button _prev" type="button">
+          <span class="b_vHidden">Предыдущий отзыв</span>
+          <svg width="22" height="41">
+            <use xlink:href="#icon-review-arrow-left"></use>
+          </svg>
+        </button>
+
+        <input class="b_vHidden" type="radio" id="btn-1" name="comments_toggle" checked />
+        <input class="b_vHidden" type="radio" id="btn-2" name="comments_toggle" />
+        <input class="b_vHidden" type="radio" id="btn-3" name="comments_toggle" />
+        <div class="comments__toggles b-slider__toggles">
+          <label class="button _toggle b-slider__toggle" for="btn-1"><span class="b_vHidden">1</span></label>
+          <label class="button _toggle b-slider__toggle" for="btn-2"><span class="b_vHidden">2</span></label>
+          <label class="button _toggle b-slider__toggle" for="btn-3"><span class="b_vHidden">3</span></label>
+        </div>
+
+        <ul class="comments__list b-slider__list">
+          <li class="comments__item _active b-slider__item">
+            <blockquote class="comments__quote">
               <p>
                 &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей
                 будущей женой в комментариях к выложенной фотографии!&raquo;
               </p>
               <footer>
                 <cite>
-                  <p>Николай Петров</p>
-                  <p>25 лет, водитель трамвая</p>
+                  <p class="comments__author">Николай Петров</p>
+                  <p class="comments__authorInfo">25 лет, водитель трамвая</p>
                 </cite>
               </footer>
             </blockquote>
           </li>
-          <li>
-            <blockquote>
+          <li class="comments__item b-slider__item">
+            <blockquote class="comments__quote">
               <p>&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!&raquo;</p>
               <footer>
                 <cite>
-                  <p>Петр Николеав</p>
-                  <p>25 лет, водитель автобуса</p>
+                  <p class="comments__author">Петр Петров</p>
+                  <p class="comments__authorInfo">25 лет, водитель автобуса</p>
+                </cite>
+              </footer>
+            </blockquote>
+          </li>
+          <li class="comments__item b-slider__item">
+            <blockquote class="comments__quote">
+              <p>&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!&raquo;</p>
+              <footer>
+                <cite>
+                  <p class="comments__author">Петр Николаев</p>
+                  <p class="comments__authorInfo">25 лет, водитель такси</p>
                 </cite>
               </footer>
             </blockquote>
           </li>
         </ul>
+
+        <button class="button _next" type="button">
+          <span class="b_vHidden">Следующий отзыв</span>
+          <svg width="22" height="41">
+            <use xlink:href="#icon-review-arrow-right"></use>
+          </svg>
+        </button>
       </section>
 
-      <section class="price">
-        <h2 class="b_vHidden">Тарифы</h2>
-        <button type="button">Предыдущий тариф</button>
-        <button type="button">Следующий тариф</button>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>База<br /><span>1,99&nbsp;USD</span></th>
-              <th>Стандарт<br /><span>3,99&nbsp;USD</span></th>
-              <th>Анлим<br /><span>9,99&nbsp;USD</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Розовый фильтр</td>
-              <td><img src="" alt="да" /></td>
-              <td><img src="" alt="да" /></td>
-              <td><img src="" alt="да" /></td>
-            </tr>
-            <tr>
-              <td>Смайлики</td>
-              <td><img src="" alt="нет" /></td>
-              <td><img src="" alt="да" /></td>
-              <td><img src="" alt="да" /></td>
-            </tr>
-            <tr>
-              <td>Комментарии</td>
-              <td><img src="" alt="нет" /></td>
-              <td><img src="" alt="нет" /></td>
-              <td><img src="" alt="да" /></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+      <div class="b-containerWidth">
+        <section class="subscription b-containerPad grayBorder">
+          <h2 class="b_vHidden">Тарифы</h2>
+
+          <div class="subscription__wrap">
+            <table class="subscription__table _middle">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="subscription__header">
+                    <h3>База</h3>
+                    <p>1,99&nbsp;USD</p>
+                  </th>
+                  <th class="subscription__header _hit">
+                    <h3>Стандарт</h3>
+                    <p>3,99&nbsp;USD</p>
+                  </th>
+                  <th class="subscription__header">
+                    <h3>Анлим</h3>
+                    <p>9,99&nbsp;USD</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Розовый&nbsp;фильтр</td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                </tr>
+                <tr>
+                  <td>Смайлики</td>
+                  <td><img class="subscription__tableImg _no" src="./img/icon-no.svg" alt="нет" /></td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                </tr>
+                <tr>
+                  <td>Комментарии</td>
+                  <td><img class="subscription__tableImg _no" src="./img/icon-no.svg" alt="нет" /></td>
+                  <td><img class="subscription__tableImg _no" src="./img/icon-no.svg" alt="нет" /></td>
+                  <td><img class="subscription__tableImg _yes" src="./img/icon-yes-green.svg" alt="да" /></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p class="subscription__toggles b-slider__toggles">
+              <button class="button _toggle b-slider__toggle" type="button" id="main_1">
+                <span class="b_vHidden">1</span>
+              </button>
+              <button class="button _toggleActive b-slider__toggle" type="button" id="main_2">
+                <span class="b_vHidden">2</span>
+              </button>
+              <button class="button _toggle b-slider__toggle" type="button" id="main_3">
+                <span class="b_vHidden">3</span>
+              </button>
+            </p>
+          </div>
+        </section>
+      </div>
 
       <section class="contacts">
-        <h2 class="b_vHidden">Контакты</h2>
-        <p>Остались вопросы?</p>
-        <p>Свяжитесь с нами!</p>
-        <div>
-          <p>Звоните:</p>
-          <a href="tel:+78125556666">+7 (812) 555-66-66</a>
+        <div class="b-container">
+          <h2 class="b_vHidden">Контакты</h2>
+          <p class="contacts__h2 ">Остались вопросы?</p>
+          <p class="contacts__h2 ">Свяжитесь с нами!</p>
+          <div class="contacts__wrap">
+            <div class="contacts__item">
+              <h3>Звоните:</h3>
+              <p><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+            </div>
+            <div class="contacts__item">
+              <h3>Приезжайте в гости:</h3>
+              <p>
+                ул. Большая<br />
+                Конюшенная, 19/8
+              </p>
+            </div>
+            <div class="contacts__item">
+              <h3>Пишите:</h3>
+              <p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p>Приезжайте в гости:</p>
-          <p>
-            ул. Большая<br />
-            Конюшенная, 19/8
-          </p>
-        </div>
-        <div>
-          <p>Пишите:</p>
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div>
-          <img src="" alt="Карта" />
+        <div class="contacts__map b-containerWidth">
+          <iframe
+            class="contacts__googleMap"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1553031396109"
+            width="320"
+            height="200"
+            frameborder="0"
+            style="border:0;"
+            allowfullscreen
+          ></iframe>
+
+          <picture class="contacts__picture">
+            <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x" />
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x" />
+            <img src="./img/bg-map-mobile@1x.png" width="320" height="645" alt="Карта: ул. Большая Конюшенная, 19/8" />
+          </picture>
         </div>
       </section>
     </main>

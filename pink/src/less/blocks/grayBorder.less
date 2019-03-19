@@ -1,0 +1,37 @@
+.grayBorder {
+  position: relative;
+  padding-top: 50px;
+
+  @media (min-width: @media_tablet) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: @media_desktop) {
+    padding-top: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid @color-gray2;
+    border-left: @media_mobile solid transparent;
+    z-index: -1;
+
+    @media (min-width: @media_tablet) {
+      top: -50px;
+      border-bottom: 50px solid @color-gray2;
+      border-left: @media_tablet solid transparent;
+    }
+
+    @media (min-width: @media_desktop) {
+      top: -90px;
+      border-bottom: 90px solid @color-gray2;
+      border-left: @media_desktop solid transparent;
+    }
+  }
+}

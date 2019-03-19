@@ -8,6 +8,8 @@
   text-align: center;
   font-weight: 700;
   text-decoration: none;
+  background-color: transparent;
+  border: none;
 
   &:hover,
   &:focus {
@@ -19,7 +21,6 @@
     text-transform: uppercase;
     color: @color-white;
     background-color: @color-green;
-    border: none;
 
     &:hover,
     &:focus {
@@ -77,5 +78,50 @@
       background-color: @color-dark_blue_30;
       border-color: transparent;
     }
+  }
+
+  &._prev,
+  &._next {
+    padding: 0;
+    color: @color-dark_blue_30;
+
+    &:hover,
+    &:focus {
+      color: @color-dark_blue_60;
+    }
+
+    &:active {
+      color: @color-dark_blue_10;
+    }
+  }
+
+  &._toggle {
+    width: 9px + 3px;
+    height: 9px + 3px;
+    margin: 15px;
+    padding: 0;
+    background-color: @color-dark_blue_30;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: @color-dark_blue_60;
+    }
+
+    &:active {
+      background-color: @color-dark_blue_10;
+    }
+  }
+
+  &._toggleActive {
+    width: 9px + 3px;
+    height: 9px + 3px;
+    margin: 15px;
+    padding: 0;
+    background-color: transparent;
+    border: 3px solid @color-dark_blue;
+    border-radius: 50%;
   }
 }

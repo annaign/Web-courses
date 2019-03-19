@@ -27,6 +27,31 @@ document.addEventListener("DOMContentLoaded", function() {
     mainNav.classList.remove("_open");
   });
 
+  var btnNext = document.querySelector("button._next");
+  var btnPrev = document.querySelector("button._prev");
+
+  if (btnNext) {
+    btnNext.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      var slideCurrent = document.querySelector(".comments__item._active");
+      if (slideCurrent.nextElementSibling) {
+        slideCurrent.nextElementSibling.classList.add("_active");
+        slideCurrent.classList.remove("_active");
+      }
+    });
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener("click", function(evt) {
+      evt.preventDefault();
+      var slideCurrent = document.querySelector(".comments__item._active");
+      if (slideCurrent.previousElementSibling) {
+        slideCurrent.previousElementSibling.classList.add("_active");
+        slideCurrent.classList.remove("_active");
+      }
+    });
+  }
+
   var imgEditors = document.querySelectorAll(".postForm__editor");
 
   for (var i = 0; i < imgEditors.length; i++) {
@@ -39,4 +64,76 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+
+  var subscriptionTable = document.querySelector(".subscription__table");
+  var subscriptionToggles = document.querySelector(".subscription__toggles");
+  var subscriptionBtnLeft = document.getElementById("main_1");
+  var subscriptionBtnMiddle = document.getElementById("main_2");
+  var subscriptionBtnRight = document.getElementById("main_3");
+
+  subscriptionBtnLeft.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if (evt.currentTarget.classList.contains("_toggleActive")) {
+      return;
+    }
+
+    var tmpBtnActive = subscriptionToggles.querySelector("._toggleActive");
+    tmpBtnActive.classList.add("_toggle");
+    tmpBtnActive.classList.remove("_toggleActive");
+
+    evt.currentTarget.classList.remove("_toggle");
+    evt.currentTarget.classList.add("_toggleActive");
+
+    subscriptionTable.classList.add("_left");
+    if (subscriptionTable.classList.contains("_middle")) {
+      subscriptionTable.classList.remove("_middle");
+    } else if (subscriptionTable.classList.contains("_right")) {
+      subscriptionTable.classList.remove("_right");
+    }
+  });
+
+  subscriptionBtnMiddle.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if (evt.currentTarget.classList.contains("_toggleActive")) {
+      return;
+    }
+
+    var tmpBtnActive = subscriptionToggles.querySelector("._toggleActive");
+    tmpBtnActive.classList.add("_toggle");
+    tmpBtnActive.classList.remove("_toggleActive");
+
+    evt.currentTarget.classList.remove("_toggle");
+    evt.currentTarget.classList.add("_toggleActive");
+
+    subscriptionTable.classList.add("_middle");
+    if (subscriptionTable.classList.contains("_left")) {
+      subscriptionTable.classList.remove("_left");
+    } else if (subscriptionTable.classList.contains("_right")) {
+      subscriptionTable.classList.remove("_right");
+    }
+  });
+
+  subscriptionBtnRight.addEventListener("click", function(evt) {
+    evt.preventDefault();
+
+    if (evt.currentTarget.classList.contains("_toggleActive")) {
+      return;
+    }
+
+    var tmpBtnActive = subscriptionToggles.querySelector("._toggleActive");
+    tmpBtnActive.classList.add("_toggle");
+    tmpBtnActive.classList.remove("_toggleActive");
+
+    evt.currentTarget.classList.remove("_toggle");
+    evt.currentTarget.classList.add("_toggleActive");
+
+    subscriptionTable.classList.add("_right");
+    if (subscriptionTable.classList.contains("_middle")) {
+      subscriptionTable.classList.remove("_middle");
+    } else if (subscriptionTable.classList.contains("_left")) {
+      subscriptionTable.classList.remove("_left");
+    }
+  });
 });
