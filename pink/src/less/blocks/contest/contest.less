@@ -201,6 +201,18 @@
 
   &._story {
     margin-top: 40px;
+
+    textarea {
+      &:hover,
+      &:focus {
+        border-color: @color-dark_blue;
+        outline: none;
+      }
+
+      &:active {
+        border-color: @color-red;
+      }
+    }
   }
 }
 
@@ -376,9 +388,7 @@
     width: 100%;
     padding: 20px;
     border: 2px solid @color-gray;
-  }
 
-  input[type="text"] {
     &:hover,
     &:focus {
       border-color: @color-dark_blue;
